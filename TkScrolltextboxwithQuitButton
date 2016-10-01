@@ -1,0 +1,19 @@
+from Tkinter import *
+import Pmw, sys
+
+
+root = Tk()
+
+top = Frame(root); top.pack(side='top')
+text = Pmw.ScrolledText(top,
+borderframe=5, # a bit space around the text...
+vscrollmode='dynamic', hscrollmode='none',
+
+text_width=40, text_height=4,
+text_wrap='none', # do not break too long lines
+)
+text.pack()
+# insert file as a string in the text widget:
+
+Button(top, text='Quit', command=root.destroy).pack(pady=15)
+root.mainloop()
