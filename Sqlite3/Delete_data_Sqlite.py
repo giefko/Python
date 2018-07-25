@@ -11,10 +11,9 @@ def db_connect(db_path=DEFAULT_PATH):
  
 
         sql = """
-        UPDATE albums 
-        SET artist = 'John Doe' 
-        WHERE artist = 'Andy Hunter'
-         """
+        DELETE FROM albums
+        WHERE artist = 'John Doe'
+        """
         cursor.execute(sql)
         conn.commit()
     except Error as e:
