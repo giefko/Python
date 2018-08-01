@@ -7,7 +7,7 @@ from sqlite3 import Error
 import unicodedata
 
 
-def newUser():
+def resetpass():
 
 
     answer = 'Y'
@@ -37,8 +37,6 @@ def newUser():
                 answer = raw_input("Do you want to search again (Y/N): ")
 
 
-
-
         except Error as e:
             print("Connection error")
             print(e)
@@ -58,4 +56,4 @@ def check_password(hashed_password, user_password):
 
 
 if __name__ == '__main__':
-    newUser()
+    resetpass()
