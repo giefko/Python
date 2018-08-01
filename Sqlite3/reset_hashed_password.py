@@ -4,8 +4,6 @@ import sqlite3
 import uuid
 import hashlib
 from sqlite3 import Error
-import unicodedata
-
 
 def resetpass():
 
