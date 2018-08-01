@@ -20,7 +20,7 @@ def newUser():
 
 
         try:
-            conn = sqlite3.connect("/home/kokkinef/Desktop/python/mydatabase2.db")
+            conn = sqlite3.connect("/path/mydatabase2.db")
             print("Connection!!!")
             cursor = conn.cursor()
 
