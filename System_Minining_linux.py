@@ -13,6 +13,7 @@ import fcntl
 import struct
 
 
+
 print('---------------------------------------------------')
 print ("OS: ") + platform.uname()[0] + " " + platform.architecture()[0] + " " + platform.linux_distribution()[0] + " " + \
       platform.linux_distribution()[1]
@@ -105,9 +106,11 @@ if __name__ == '__main__':
 
     print('---------------------------------------------------')
 
-    print get_ip_address('eth0')
+    print 'IP: '+get_ip_address('eth0')
 
     print('---------------------------------------------------')
+
+    print 'MAC ADDRESS: '+get_hw_address("eth0")
 
 
 
