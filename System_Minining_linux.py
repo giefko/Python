@@ -11,6 +11,7 @@ import argparse
 import socket
 import fcntl
 import struct
+import getpass
 
 
 
@@ -111,6 +112,12 @@ if __name__ == '__main__':
     print('---------------------------------------------------')
 
     print 'MAC ADDRESS: '+get_hw_address("eth0")
+      
+    print('---------------------------------------------------')
+
+    print getpass.getuser()
+
+    print('---------------------------------------------------')
 
 
 
