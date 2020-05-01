@@ -10,7 +10,7 @@ for carg in sys.argv:
         argnum += 1
         fullurl = sys.argv[argnum]
 
-resp = urllib.request.urlopen(fullurl + “=1\’ or \’1\’ = \’1\””)
+resp = urllib.request.urlopen(fullurl + â€œ=1\â€™ or \â€™1\â€™ = \â€™1\â€â€)
 
 body = resp.read()
 
