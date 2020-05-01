@@ -1,6 +1,6 @@
 Preventing SQLi ON MYSQL if very simple. Just use mysql_real_escape string for queries, as example:
 
-$query = sprintf(“SELECT * FROM users where user=’%s’ AND password=’%s’,
+$query = sprintf(â€œSELECT * FROM users where user=â€™%sâ€™ AND password=â€™%sâ€™,
 
                         mysql_real_escape_string($username)
 
