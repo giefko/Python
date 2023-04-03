@@ -2,7 +2,7 @@ import PyPDF3
 import pyttsx3
 import pdfplumber
 
-file = input("Add the name of your pdf file")
+file = 'Book.pdf'
 book = open(file, 'rb')
 pdfReader = PyPDF3.PdfFileReader(book)
 pages = pdfReader.numPages
@@ -15,5 +15,9 @@ with pdfplumber.open(file) as pdf:
         finalText += text
 
 engine = pyttsx3.init()
-engine.save_to_file(finalText, 'YourNewAudio.mp3')
+voices = engine.getProperty('voices')
+#Female
+engine.setProperty('voice', voices[1].id)
+engine.setProperty('rate', 150)
+engine.save_to_file(finalText, 'New.mp3')
 engine.runAndWait()
