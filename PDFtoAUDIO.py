@@ -16,9 +16,9 @@ with pdfplumber.open(file) as pdf:
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-#Female
-engine.setProperty('voice', voices[1].id)
+#Male
+engine.setProperty('voice', voices[0].id) 
 rate = engine.getProperty('rate')
-engine.setProperty('rate', rate-50)
+engine.setProperty('rate', rate-150)
 engine.save_to_file(finalText, 'New.mp3')
 engine.runAndWait()
