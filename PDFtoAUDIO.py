@@ -18,6 +18,7 @@ engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 #Female
 engine.setProperty('voice', voices[1].id)
-engine.setProperty('rate', 150)
+rate = engine.getProperty('rate')
+engine.setProperty('rate', rate-50)
 engine.save_to_file(finalText, 'New.mp3')
 engine.runAndWait()
